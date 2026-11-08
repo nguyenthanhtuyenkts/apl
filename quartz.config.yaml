@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Quartz 5
+  pageTitle: A Pattern Language
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
@@ -16,8 +16,8 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Schibsted Grotesk
-      body: Source Sans Pro
+      header: Roboto
+      body: Roboto
       code: IBM Plex Mono
     colors:
       lightMode:
@@ -31,14 +31,14 @@ configuration:
         highlight: rgba(143, 159, 169, 0.15)
         textHighlight: "#fff23688"
       darkMode:
-        light: "#161618"
-        lightgray: "#393639"
+        light: "#100e17"
+        lightgray: "#191621"
         gray: "#646464"
-        darkgray: "#d4d4d4"
-        dark: "#ebebec"
-        secondary: "#7b97aa"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
+        darkgray: "#bebebe"
+        dark: "#f8fcff"
+        secondary: "#dadada"
+        tertiary: "#a882ff"
+        highlight: "#6439c77a"
         textHighlight: "#b3aa0288"
   links:
     markdownLinkResolution: shortest
@@ -78,6 +78,7 @@ plugins:
     layout:
       position: right
       priority: 30
+      display: desktop-only
   - source: "@quartz-community/description"
     enabled: true
     order: 70
@@ -171,7 +172,7 @@ plugins:
       position: beforeBody
       priority: 20
   - source: "@quartz-community/tag-list"
-    enabled: false
+    enabled: true
     layout:
       position: beforeBody
       priority: 30
@@ -211,7 +212,7 @@ plugins:
     options:
       links:
         GitHub: https://github.com/jackyzha0/quartz
-        Discord Community: https://discord.gg/cRFFHYye7t
+        Content: https://github.com/nguyenthanhtuyenkts/patternlanguage
     layout:
       position: footer
       priority: 50
@@ -238,7 +239,7 @@ plugins:
         - tags
         - aliases
       excludedProperties: []
-      hidePropertiesView: false
+      hidePropertiesView: true
     order: 5
     layout:
       position: beforeBody
@@ -260,11 +261,13 @@ layout:
     folder:
       exclude:
         - reader-mode
+        - tag-list
       positions:
         right: []
     tag:
       exclude:
         - reader-mode
+        - tag-list
       positions:
         right: []
     canvas: {}
